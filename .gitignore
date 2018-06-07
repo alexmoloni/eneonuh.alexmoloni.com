@@ -1,0 +1,4 @@
+wp-includes/
+wp-admin/
+.idea/
+node_modules/
