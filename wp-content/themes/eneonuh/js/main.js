@@ -10,7 +10,7 @@ var auth = make_base_auth('ck_419652ef94bd65f963e6af8f234960f61ba96b89', 'cs_5f0
 
 
 $.ajax({
-  url: "/wp-json/wc/v2/products",
+  url: "/wp-json/wc/v2/products?orderby=title",
   method: 'GET',
   beforeSend: function (req) {
     req.setRequestHeader('Authorization', auth);

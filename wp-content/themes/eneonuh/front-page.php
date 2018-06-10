@@ -11,8 +11,6 @@ get_header();
 <h1>Front Page.php</h1>
 
 <?php
-require __DIR__ . '/vendor/autoload.php';
-
 use Automattic\WooCommerce\Client;
 
 $woocommerce = new Client(
@@ -24,6 +22,6 @@ $woocommerce = new Client(
 		'version' => 'wc/v2'
 	]
 );
-//print_r($woocommerce->get('products'));
+print_r($woocommerce->get('products'));
 //print_r($woocommerce);
 get_footer();
