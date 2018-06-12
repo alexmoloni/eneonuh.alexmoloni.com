@@ -1,2 +1,6 @@
 node_modules/
 vendor/
+assets/js/dev/
+assets/css/dev/
+assets/js/prod/
+assets/css/prod/

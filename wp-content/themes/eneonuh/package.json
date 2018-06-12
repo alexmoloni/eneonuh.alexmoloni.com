@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "wp:prod": "webpack --env.env=prod --display-error-details",
-    "wp:dev": "webpack --env.env=dev --display-error-details --watch"
+    "prod": "webpack --env.env=prod --display-error-details",
+    "dev": "webpack --env.env=dev --display-error-details --watch"
   },
   "repository": {
     "type": "git",

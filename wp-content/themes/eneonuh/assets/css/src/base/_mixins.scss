@@ -1,0 +1,97 @@
+@mixin minw($br) {
+    @media (min-width: $br) {
+        @content;
+    }
+}
+
+@mixin maxw($br) {
+    @media (max-width: $br) {
+        @content;
+    }
+}
+
+@function toRem($pixels, $root) {
+    @return $pixels / $root;
+}
+
+@mixin shineAnimation() {
+    overflow: hidden;
+    position: relative;
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-100%);
+        background: linear-gradient(30deg, #ffd401 0%,#ffeb96 50%,#ffeb96 51%,#ffd401 100%);
+    }
+
+    &:hover {
+        &:before {
+            animation: shine 0.3s ease-out;
+        }
+    }
+}
+
+//to use on btn element containing the <a> elem and <i> elem
+@mixin ctaButtonLayout() {
+    a, .txt {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex: 1 1 auto;
+        position: relative;
+        z-index: 20;
+    }
+    i {
+        display: inline-block;
+        background-image: url(/assets/images/btns/arrow-right.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        vertical-align: middle;
+    }
+
+}
+
+//to use on btn element containing the <a> elem and <i> elem
+@mixin animateArrow() {
+    &:hover {
+        i {
+            animation: arrow 0.5s ease-out;
+            animation-fill-mode: both;
+        }
+    }
+}
+
+@mixin standardArrow() {
+    .arrow-right {
+        width: 8px;
+        height: 16px;
+        margin-left: 35px;
+    }
+}
+
+@mixin yellowBtnSmall() {
+    width: 204px;
+    height: 34px;
+    font-size: 15px;
+    background-color: $ctaColor;
+    color: $primaryColor;
+
+    a, .txt {
+        padding-left: 52px;
+    }
+}
+
+@mixin prefix($what, $value) {
+    -webkit-#{$what}: #{$value};
+    -moz-#{$what}: #{$value};
+    -ms-#{$what}: #{$value};
+    -o-#{$what}: #{$value};
+    #{$what}: #{$value};
+}

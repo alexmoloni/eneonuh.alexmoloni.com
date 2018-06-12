@@ -1,0 +1,36 @@
+.main-navigation {
+    position: fixed;
+    z-index: 999;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    transform: translateX(-100%);
+    overflow-x: hidden;
+    transition: 0.5s;
+    height: 100%;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, .1);
+    background: #fff;
+    opacity: 0;
+
+    &.is-open {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .menu-item {
+        border-top: 1px solid #e2e2e2;
+
+        &:first-child {
+            border-top: none;
+        }
+
+        a {
+            font-weight: 700;
+            padding: 17px;
+            text-transform: none;
+            word-wrap: break-word;
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+$primaryColor: #272727;
+$secondaryColor: #ef8e87;
+$colorGrey: #4f504f;
+$mobileWidth: 800px;
+$rootFontSize: 16px;
+$shadow: rgba(0, 0, 0, 0.18);
+$br-xs: 400px;
+$br-sm: 800px;
+$br-md: 1000px;
+
+@function rem($pixels) {
+	$value: toRem($pixels, $rootFontSize);
+	@return $value * 1rem;
+}
+
+@function em($pixels, $root) {
+	@return $pixels / $root * 1em;
+}
+
+html {
+	font-family: 'Open Sans', sans-serif;
+	font-size: $rootFontSize;
+	color: $primaryColor;
+
+	@include maxw($mobileWidth) {
+		font-size: 14px;
+	}
+}
+
+html * {
+	box-sizing: border-box;
+
+}
+
+.content {
+	max-width: 976px;
+	margin: 0 auto;
+	position: relative;
+
+}
+
+
+
+img {
+	max-width: 100%;
+}
+
+strong {
+	font-weight: bold;
+}
+
+button, a {
+	cursor: pointer;
+}
+
+h2 {
+	font-weight: 300;
+	font-size: rem(31px);
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+section[class*=section] {
+	margin-bottom: 98px;
+
+	@include maxw($br-sm) {
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-bottom: 75px;
+	}
+}
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: inherit;
+
+	a {
+		display: block;
+	}
+}
+
+.arrow-right {
+	background-image: url(/assets/images/btns/arrow-right.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	display: block;
+}
+
+
+.mobile-only {
+	@include minw($br-sm) {
+		display: none !important;
+	}
+}
+
+.desktop-only {
+	@include maxw($br-sm) {
+		display: none !important;
+	}
+}
+

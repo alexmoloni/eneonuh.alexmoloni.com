@@ -22,6 +22,6 @@ $woocommerce = new Client(
 		'version' => 'wc/v2'
 	]
 );
-print_r($woocommerce->get('products'));
+//print_r($woocommerce->get('products'));
 //print_r($woocommerce);
 get_footer();

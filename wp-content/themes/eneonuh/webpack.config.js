@@ -40,7 +40,7 @@ module.exports = (env = {}) => {
 		entry: {
 			//the key is used to specify the location where the output files will be saved - it depends on env
 			[`assets/js/${ENV}/main.js`]: 		'./assets/js/src/main.js',
-			[`assets/css/${ENV}/style.css`]: 	'./assets/css/src/style.scss'
+			[`assets/css/${ENV}/main.css`]: 	'./assets/css/src/main.scss'
 		},
 		output: {
 			path: path.resolve(__dirname, './'),
