@@ -13,6 +13,17 @@
     background: #fff;
     opacity: 0;
 
+    @include minw($br-sm) {
+        position: static;
+        transform: translateX(0);
+        box-shadow: none;
+        height: auto;
+        top: auto;
+        bottom: auto;
+        width: auto;
+        opacity: 1;
+    }
+
     &.is-open {
         transform: translateX(0);
         opacity: 1;
@@ -23,6 +34,10 @@
 
         &:first-child {
             border-top: none;
+        }
+
+        &:last-child {
+            border-bottom: 1px solid #e2e2e2;
         }
 
         a {

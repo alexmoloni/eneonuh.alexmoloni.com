@@ -1,3 +1,9 @@
+#Alias to images
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^images/(.*) /wp-content/themes/eneonuh/assets/images/$1 [L]
+</IfModule>
+
 
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
@@ -20,14 +26,12 @@ RewriteRule !^wp-includes/ - [S=3]
 RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
 RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
 RewriteRule ^wp-includes/theme-compat/ - [F,L]
-</IfModule>
 
 # Stop spam attack logins and comments
-<IfModule mod_rewrite.c>
-RewriteEngine On
 RewriteCond %{REQUEST_METHOD} POST
 RewriteCond %{REQUEST_URI} .*/(wp-comments-post|wp-login)\.php.*
 RewriteCond %{HTTP_REFERER} !.*alexmoloni.com.* [OR]
 RewriteCond %{HTTP_USER_AGENT} ^$
 RewriteRule (.*) http://%{REMOTE_ADDR}/ [R=301,L]
+
 </IfModule>

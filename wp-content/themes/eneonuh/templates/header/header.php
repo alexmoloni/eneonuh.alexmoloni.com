@@ -10,7 +10,7 @@
 
     <div class="content">
         <h1 class="logo desktop-only">
-            <a href="/"><img src="" alt="Ene Onuh Fashion Logo"></a>
+            <a href="/"><img id="logo" src="images/prod/header/logo.jpg" alt="Ene Onuh Fashion Logo"></a>
         </h1>
         <button class="hamburger hamburger--emphatic mobile-only">
             <span class="hamburger-box">
