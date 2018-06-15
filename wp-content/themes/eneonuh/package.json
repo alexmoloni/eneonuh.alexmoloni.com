@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "prod": "webpack --env.env=prod --display-error-details",
-    "dev": "webpack --env.env=dev --display-error-details --watch"
+    "dev": "concurrently \"npm run gulp-images\" \"npm run webpack-dev\"" ,
+    "webpack-dev": "webpack --env.env=dev --display-error-details --watch",
+    "webpack-prod": "webpack --env.env=prod --display-error-details",
+    "gulp-images": "gulp watch-images"
   },
   "repository": {
     "type": "git",
@@ -21,10 +24,14 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
+    "concurrently": "^3.5.1",
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.9",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.11",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-newer": "^1.4.0",
     "img-loader": "^3.0.0",
     "node-sass": "^4.7.2",
     "postcss-loader": "^2.1.0",

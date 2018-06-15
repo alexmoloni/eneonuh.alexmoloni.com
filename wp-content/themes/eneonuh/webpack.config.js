@@ -6,9 +6,9 @@ env: {}
 
 var path = require('path');
 var ETP = require('extract-text-webpack-plugin');
-var ImageminPlugin = require('imagemin-webpack-plugin').default;
+// var ImageminPlugin = require('imagemin-webpack-plugin').default;
 var CopyWebpackPlugin = require('copy-webpack-plugin');
-const imageminMozjpeg = require('imagemin-mozjpeg');
+// const imageminMozjpeg = require('imagemin-mozjpeg');
 
 
 module.exports = (env = {}) => {
@@ -27,24 +27,24 @@ module.exports = (env = {}) => {
 
   plugins.push(
     new ETP('[name]'),
-    new CopyWebpackPlugin([
-      {from: 'assets/images/src', to: 'assets/images/prod'}
-    ]),
-    new ImageminPlugin({
-      pngquant: {
-        quality: '65',
-      },
-
-      jpegtran: null,
-    }),
-    new ImageminPlugin({
-      plugins: [
-        imageminMozjpeg({
-          quality: 70,
-          progressive: true
-        })
-      ]
-    })
+    // new CopyWebpackPlugin([
+    //   {from: 'assets/images/src', to: 'assets/images/prod'}
+    // ]),
+    // new ImageminPlugin({
+    //   pngquant: {
+    //     quality: '65',
+    //   },
+    //
+    //   jpegtran: null,
+    // }),
+    // new ImageminPlugin({
+    //   plugins: [
+    //     imageminMozjpeg({
+    //       quality: 70,
+    //       progressive: true
+    //     })
+    //   ]
+    // })
   );
 
   /* if('prod' === ENV) {
