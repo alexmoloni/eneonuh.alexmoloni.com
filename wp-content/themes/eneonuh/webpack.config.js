@@ -6,10 +6,6 @@ env: {}
 
 var path = require('path');
 var ETP = require('extract-text-webpack-plugin');
-// var ImageminPlugin = require('imagemin-webpack-plugin').default;
-var CopyWebpackPlugin = require('copy-webpack-plugin');
-// const imageminMozjpeg = require('imagemin-mozjpeg');
-
 
 module.exports = (env = {}) => {
   var ENV = env.env;
@@ -27,35 +23,7 @@ module.exports = (env = {}) => {
 
   plugins.push(
     new ETP('[name]'),
-    // new CopyWebpackPlugin([
-    //   {from: 'assets/images/src', to: 'assets/images/prod'}
-    // ]),
-    // new ImageminPlugin({
-    //   pngquant: {
-    //     quality: '65',
-    //   },
-    //
-    //   jpegtran: null,
-    // }),
-    // new ImageminPlugin({
-    //   plugins: [
-    //     imageminMozjpeg({
-    //       quality: 70,
-    //       progressive: true
-    //     })
-    //   ]
-    // })
   );
-
-  /* if('prod' === ENV) {
-    plugins.push(new webpack.optimize.UglifyJsPlugin({
-      warnings: true,
-      ie8: true,
-      safari10: true,
-      compress: false
-    }))
-  } */
-
 
   return {
     entry: {
@@ -112,13 +80,6 @@ module.exports = (env = {}) => {
             ]
           })
         },
-        {
-          test: /\.(jpe?g|png|gif|svg)$/i,
-          use: [
-            'url-loader?limit=10000',
-            'img-loader'
-          ]
-        }
       ]
     },
 

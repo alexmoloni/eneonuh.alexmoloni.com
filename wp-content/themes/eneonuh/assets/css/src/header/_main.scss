@@ -1,0 +1,30 @@
+header.header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+
+    @include minw($br-md) {
+        padding: initial;
+        margin-bottom: 50px;
+    }
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include minw($br-md) {
+            margin-top: 34px;
+        }
+    }
+
+    .logo {
+        display: none;
+
+        @include minw($br-md) {
+            display: block;
+        }
+        h1 {
+            text-transform: uppercase;
+        }
+    }
+}

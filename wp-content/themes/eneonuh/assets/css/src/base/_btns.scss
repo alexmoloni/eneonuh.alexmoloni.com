@@ -1,0 +1,11 @@
+.btn-pink {
+    background-color: $secondaryColor;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $colorGrey;
+    }
+}

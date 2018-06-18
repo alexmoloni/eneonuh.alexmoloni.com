@@ -13,7 +13,7 @@
     background: #fff;
     opacity: 0;
 
-    @include minw($br-sm) {
+    @include minw($br-md) {
         position: static;
         transform: translateX(0);
         box-shadow: none;
@@ -29,8 +29,48 @@
         opacity: 1;
     }
 
+    ul.menu {
+        @include minw($br-md) {
+            display: flex;
+        }
+    }
+
     .menu-item {
         border-top: 1px solid #e2e2e2;
+
+        //underline on hover
+        @mixin underline-on-hover {
+            content: '';
+            display: block;
+            bottom: -10px;
+            width: 100%;
+            height: 2px;
+            background-color: $secondaryColor;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        @include minw($br-md) {
+            border-top: none;
+            border-bottom: none;
+            font-size: rem(15px);
+            margin-right: 32px;
+            padding-bottom: 10px;
+            transition: all 0.2s;
+
+            &:after {
+                @include underline-on-hover;
+                opacity: 0;
+            }
+
+            &:hover {
+                color: $secondaryColor;
+            }
+
+            &:hover:after {
+                opacity: 1;
+            }
+        }
 
         &:first-child {
             border-top: none;
@@ -38,6 +78,22 @@
 
         &:last-child {
             border-bottom: 1px solid #e2e2e2;
+            @include minw($br-md) {
+                border-bottom: none;
+                margin-right: 0;
+            }
+        }
+
+        &.current-menu-item {
+            color: $secondaryColor;
+
+            &:after {
+                @include minw($br-md) {
+                    @include underline-on-hover;
+                    opacity: 1;
+                }
+            }
+
         }
 
         a {
@@ -46,6 +102,19 @@
             text-transform: none;
             word-wrap: break-word;
             display: block;
+
+            @include minw($br-md) {
+                font-weight: normal;
+                padding: 2px;
+
+            }
         }
+    }
+}
+
+.header #overlay-shadow {
+
+    @include minw($br-md) {
+        display: none;
     }
 }

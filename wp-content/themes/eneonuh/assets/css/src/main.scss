@@ -2,6 +2,10 @@
 @import "base/mixins";
 @import 'base/base';
 @import 'base/animations';
+@import 'base/btns';
 @import '~hamburgers/_sass/hamburgers/hamburgers';
+@import "header/main";
 @import "header/main-navigation";
+@import "header/side-navigation";
 @import "header/header-hamburger";
+@import "front-page/hero-section";

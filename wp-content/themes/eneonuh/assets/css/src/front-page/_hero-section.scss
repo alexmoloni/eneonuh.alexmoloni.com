@@ -1,0 +1,103 @@
+section#hero {
+    $br-md: 1070px;
+
+    .col-left {
+        max-width: 857px;
+    }
+
+    .col-right {
+        position: absolute;
+        left: 20px;
+        top: 50px;
+
+        @include minw($br-md) {
+            top: 89px;
+            right: 0;
+            left: auto;
+        }
+    }
+    .heading-wrap {
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .heading {
+            margin-bottom: 19px;
+        }
+
+        @mixin lineBackground {
+            &:before {
+                content: '';
+                display: block;
+                opacity: 0.7;
+                background-color: #fff;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+        .heading .line {
+            padding: 10px 20px;
+            font-size: 40px;
+            color: $colorGrey;
+            font-weight: 800;
+            display: block;
+            text-transform: uppercase;
+            position: relative;
+            @include lineBackground;
+
+            @include minw($br-md) {
+                padding-right: 0;
+            }
+
+            .text {
+                position: relative;
+            }
+        }
+
+        .line-1 {
+            margin-bottom: 9px;
+        }
+
+        .subheading {
+            font-size: 25px;
+            text-align: right;
+            position: relative;
+            align-self: flex-end;
+            padding: 8px 10px;
+            display: flex;
+            @include lineBackground;
+
+            .text {
+                display: inline-flex;
+                align-items: center;
+                position: relative;
+            }
+
+            .text:after {
+                content: '';
+                width: 30px;
+                height: 2px;
+                background-color: $colorGrey;
+                display: block;
+                margin-right: 15px;
+                order: -1;
+            }
+        }
+
+    }
+
+    .btn-wrap {
+        text-align: right;
+
+        .btn-pink {
+            display: inline-block;
+            font-size: 16px;
+            text-transform: uppercase;
+            padding: 24px 18px;
+        }
+    }
+}

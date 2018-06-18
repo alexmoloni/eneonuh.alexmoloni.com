@@ -34,8 +34,19 @@ html * {
 
 .content {
 	max-width: 1110px;
-	margin: 0 auto;
 	position: relative;
+
+	//padding on mobile
+	margin: 0 10px;
+
+	//margin on tablets
+	@include minw($br-sm) {
+		margin: 0 50px;
+	}
+
+	@include minw(1170px) {
+		margin: 0 auto;
+	}
 
 }
 

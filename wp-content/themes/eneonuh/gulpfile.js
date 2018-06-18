@@ -12,13 +12,17 @@ gulp.task('images', () => {
       .pipe(newer(imagessDest))
       .pipe(imagemin([
         mozJpeg({
-          quality: 70,
+          quality: 80,
           progressive: true
         }),
         pngQuant({
-          quality: '65',
+          quality: '80',
         })
-      ]))
+      ],
+        {
+          minFileSize: 40000
+        }
+      ))
       .pipe(gulp.dest(imagessDest))
 });
 

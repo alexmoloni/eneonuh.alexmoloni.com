@@ -9,7 +9,10 @@
 
 
 <nav class="main-navigation" role="navigation" id="main-navigation">
-<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+<?php wp_nav_menu( array(
+        'theme_location' => 'header-menu',
+        'container' => ''
+    ) ); ?>
 </nav>
 <div id="overlay-shadow" class=""></div>
 

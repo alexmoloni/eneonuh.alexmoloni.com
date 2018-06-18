@@ -6,11 +6,7 @@
  * Time: 00:16
  */
 get_header();
-?>
 
-<h1>Front Page.php</h1>
-
-<?php
 use Automattic\WooCommerce\Client;
 
 $woocommerce = new Client(
@@ -23,5 +19,13 @@ $woocommerce = new Client(
 	]
 );
 //print_r($woocommerce->get('products'));
-//print_r($woocommerce);
+//print_r($woocommerce);?>
+
+<main class="main">
+	<?php get_template_part( 'templates/front-page/_hero-section' ); ?>
+
+
+</main>
+
+<?php
 get_footer();

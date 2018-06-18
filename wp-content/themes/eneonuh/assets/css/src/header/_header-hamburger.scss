@@ -1,18 +1,19 @@
 .hamburger {
-	display: none;
-	@include maxw($br-sm) {
-		display: block;
-		font: inherit;
-		overflow: visible;
-		margin: 0;
-		cursor: pointer;
-		transition-timing-function: linear;
-		transition-duration: .15s;
-		transition-property: opacity,filter;
-		text-transform: none;
-		color: inherit;
-		border: 0;
-		background-color: transparent;
+	display: block;
+	padding: 0;
+	font: inherit;
+	overflow: visible;
+	margin: 0;
+	cursor: pointer;
+	transition-timing-function: linear;
+	transition-duration: .15s;
+	transition-property: opacity,filter;
+	text-transform: none;
+	color: inherit;
+	border: 0;
+	background-color: transparent;
+	@include minw($br-md) {
+		display: none;
 	}
 }
 
@@ -56,5 +57,11 @@
 
 .hamburger-inner:after {
 	bottom: -10px
+}
+
+.header .overlay-shadow {
+	@include minw($br-sm) {
+		display: none; //use so it doesnt disturb with flex on .header .content
+	}
 }
 
