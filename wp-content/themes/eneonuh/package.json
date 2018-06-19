@@ -32,6 +32,7 @@
     "gulp": "^3.9.1",
     "gulp-imagemin": "^4.1.0",
     "gulp-newer": "^1.4.0",
+    "imagemin-optipng": "^5.2.1",
     "img-loader": "^3.0.0",
     "node-sass": "^4.7.2",
     "postcss-loader": "^2.1.0",
@@ -46,6 +47,7 @@
   },
   "dependencies": {
     "async": "^2.6.1",
+    "gulp-pngquant": "^1.0.12",
     "hamburgers": "^0.9.3",
     "imagemin-jpegoptim": "^5.2.0",
     "imagemin-jpegtran": "^5.0.2",

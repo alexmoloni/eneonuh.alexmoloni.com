@@ -1,14 +1,27 @@
 section#hero {
+    $br-xxs: 400px;
+    $br-xs: 600px;
     $br-md: 1070px;
+    margin-bottom: 61px;
 
     .col-left {
         max-width: 857px;
     }
 
     .col-right {
-        position: absolute;
-        left: 20px;
-        top: 50px;
+        position: relative;
+        top: -88px;
+
+        @include minw($br-xxs) {
+            display: inline-block;
+
+        }
+
+        @include minw($br-xs) {
+            position: absolute;
+            left: 20px;
+            top: 50px;
+        }
 
         @include minw($br-md) {
             top: 89px;
@@ -17,10 +30,26 @@ section#hero {
         }
     }
     .heading-wrap {
-        margin-bottom: 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        position: relative;
+        margin-bottom: 20px;
+
+        @include minw($br-xxs) {
+            margin-bottom: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            top: -20px;
+            padding-left: 20px;
+        }
+
+        @include minw($br-xs) {
+            margin-bottom: 33px;
+            padding-left: 0;
+        }
+
+        @include minw($br-md) {
+            margin-bottom: 50px;
+        }
 
         .heading {
             margin-bottom: 19px;
@@ -40,17 +69,30 @@ section#hero {
             }
         }
         .heading .line {
-            padding: 10px 20px;
-            font-size: 40px;
             color: $colorGrey;
             font-weight: 800;
             display: block;
             text-transform: uppercase;
             position: relative;
+            font-size: 24px;
+            text-align: center;
+            padding: 8px 18px;
             @include lineBackground;
 
+            @include minw($br-xxs) {
+                text-align: left;
+            }
+
+            @include minw($br-xs) {
+                font-size: 33px;
+                text-align: left;
+            }
+
             @include minw($br-md) {
+                font-size: 40px;
+                padding: 10px 20px;
                 padding-right: 0;
+
             }
 
             .text {
@@ -63,13 +105,25 @@ section#hero {
         }
 
         .subheading {
-            font-size: 25px;
-            text-align: right;
+            font-size: 20px;
+            text-align: center;
             position: relative;
-            align-self: flex-end;
-            padding: 8px 10px;
-            display: flex;
+            //display: flex;
             @include lineBackground;
+
+            @include minw($br-xxs) {
+                font-size: 17px;
+                text-align: right;
+                align-self: flex-end;
+            }
+
+            @include minw($br-xs) {
+                padding: 8px 10px;
+            }
+
+            @include minw($br-md) {
+                font-size: 25px;
+            }
 
             .text {
                 display: inline-flex;
@@ -77,27 +131,52 @@ section#hero {
                 position: relative;
             }
 
+            //decorative dash before the subheading text
             .text:after {
-                content: '';
-                width: 30px;
-                height: 2px;
-                background-color: $colorGrey;
-                display: block;
-                margin-right: 15px;
-                order: -1;
+
+                @include minw($br-xxs) {
+                    content: '';
+                    width: 24px;
+                    height: 2px;
+                    background-color: $colorGrey;
+                    display: block;
+                    margin-right: 15px;
+                    order: -1;
+                }
+
+                @include minw($br-md) {
+                    width: 30px;
+                }
             }
         }
 
     }
 
     .btn-wrap {
-        text-align: right;
+        text-align: center;
+
+        @include minw($br-xxs) {
+            text-align: right;
+        }
 
         .btn-pink {
             display: inline-block;
             font-size: 16px;
             text-transform: uppercase;
             padding: 24px 18px;
+
+            @include maxw($br-md) {
+                background-color: $colorGrey;
+                color: #fff;
+                border: 3px solid $colorGrey;
+                padding: 20px 14px;
+                font-size: 14px;
+
+                &:hover {
+                    background-color: rgba(255, 255, 2555, 0.7);
+                    color: $colorGrey;
+                }
+            }
         }
     }
 }

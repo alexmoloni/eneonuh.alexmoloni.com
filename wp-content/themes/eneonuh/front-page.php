@@ -23,6 +23,7 @@ $woocommerce = new Client(
 
 <main class="main">
 	<?php get_template_part( 'templates/front-page/_hero-section' ); ?>
+	<?php get_template_part( 'templates/front-page/_featured-categories-section' ); ?>
 
 
 </main>

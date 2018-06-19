@@ -1,0 +1,34 @@
+.content {
+    max-width: 1110px;
+    position: relative;
+
+    //padding on mobile
+    margin: 0 10px;
+
+    //margin on tablets
+    @include minw($br-sm) {
+        margin: 0 50px;
+    }
+
+    @include minw(1170px) {
+        margin: 0 auto;
+    }
+
+}
+
+
+.col-7 {
+    flex-basis: 58.33333333%;
+    max-width: 58.33333333%;
+}
+
+
+.col-5 {
+    flex-basis: 41.66666667%;
+    max-width: 41.66666667%;
+}
+
+.col-4 {
+    flex-basis: 33.33333333%;
+    max-width: 33.33333333%;
+}

@@ -1,6 +1,7 @@
 const $ = jQuery.noConflict();
 
-export default function () {
+function getProductsFromWoocommerce() {
+  //connect to woocommerce Rest Api
   function make_base_auth(user, password) {
     var tok = user + ':' + password;
     var hash = btoa(tok);
@@ -20,5 +21,28 @@ export default function () {
    .done(function (data) {
      console.log(data, 'a');
    });
+}
+
+function featuredCategories() {
+  $('#featured-categories .box .btn-pink').hover(
+    //handler in
+    function() {
+      $(this).parents('.box').addClass('on-hover')
+    },
+    //handler out
+    function() {
+      $(this).parents('.box').removeClass('on-hover')
+    },
+
+  )
+}
+
+
+
+export default function () {
+  getProductsFromWoocommerce();
+  featuredCategories();
+
+
 }
 

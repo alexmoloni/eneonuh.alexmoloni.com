@@ -13,6 +13,10 @@
     background: #fff;
     opacity: 0;
 
+    @include minw($br-sm) {
+        top: 60px;
+    }
+
     @include minw($br-md) {
         position: static;
         transform: translateX(0);
@@ -87,11 +91,30 @@
         &.current-menu-item {
             color: $secondaryColor;
 
+
+
             &:after {
                 @include minw($br-md) {
                     @include underline-on-hover;
                     opacity: 1;
                 }
+            }
+
+            //horizontal line indicating active item
+            a:before {
+                height: 100%;
+                width: 6px;
+                content: '';
+                display: block;
+                background-color: $secondaryColor;
+                left: 0;
+                top: 0;
+                position: absolute;
+
+                @include minw($br-md) {
+                    display: none;
+                }
+
             }
 
         }
@@ -102,12 +125,17 @@
             text-transform: none;
             word-wrap: break-word;
             display: block;
+            position: relative;
+
+            @include minw($br-sm) {
+                padding-left: 52px;
+            }
 
             @include minw($br-md) {
                 font-weight: normal;
                 padding: 2px;
-
             }
+
         }
     }
 }

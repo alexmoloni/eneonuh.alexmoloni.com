@@ -1,6 +1,7 @@
 @import "base/reset";
 @import "base/mixins";
 @import 'base/base';
+@import 'base/grid';
 @import 'base/animations';
 @import 'base/btns';
 @import '~hamburgers/_sass/hamburgers/hamburgers';
@@ -9,3 +10,4 @@
 @import "header/side-navigation";
 @import "header/header-hamburger";
 @import "front-page/hero-section";
+@import "front-page/featured-categories-section";
