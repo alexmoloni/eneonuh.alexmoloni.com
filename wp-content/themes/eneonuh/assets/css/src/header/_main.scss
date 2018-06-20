@@ -23,8 +23,16 @@ header.header {
         @include minw($br-md) {
             display: block;
         }
-        h1 {
+
+        img {
+            max-width: 81px;
+            display: inline-block;
+            margin-bottom: 16px;
+
+        }
+        span {
             text-transform: uppercase;
+            display: block;
         }
     }
 }

@@ -1,10 +1,13 @@
 section#featured-categories {
     $br-xs: 700px;
-    $br-md: 1070px;
     margin-bottom: 61px;
 
     > .content {
         display: flex;
+
+        @include maxw($br-md) {
+            display: block;
+        }
     }
 
     .box {
@@ -51,6 +54,10 @@ section#featured-categories {
 
     .col-left.col-5 {
         padding-right: 30px;
+
+        @include maxw($br-md) {
+            margin-bottom: 20px;
+        }
 
         .box {
             background-color: #f3f4f8;

@@ -11,8 +11,8 @@
     <div class="content">
         <h1 class="logo desktop-only">
             <a href="/">
-                <img id="logo" src="images/prod/header/logo.svg" alt="Ene Onuh Fashion Logo">
-                <h1>ene <strong>onuh</strong></h1>
+                <img src="images/prod/header/logo.png" alt="Ene Onuh Fashion Logo">
+                <span>ene <strong>onuh</strong></span>
             </a>
         </h1>
         <button class="hamburger hamburger--emphatic">
