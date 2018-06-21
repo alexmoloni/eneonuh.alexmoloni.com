@@ -1,12 +1,13 @@
 section#featured-categories {
-    $br-xs: 700px;
+
+    /*PART FOR DESKTOP */
     margin-bottom: 61px;
 
-    > .content {
+    > .content.-desktop {
         display: flex;
 
         @include maxw($br-md) {
-            display: block;
+            display: none;
         }
     }
 
