@@ -11,6 +11,8 @@ section#hero {
     .col-right {
         position: relative;
         top: -88px;
+        //compensate for top
+        margin-bottom: -88px;
 
         @include minw($br-xxs) {
             display: inline-block;

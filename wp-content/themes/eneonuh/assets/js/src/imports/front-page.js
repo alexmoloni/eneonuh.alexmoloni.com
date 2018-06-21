@@ -26,23 +26,40 @@ function getProductsFromWoocommerce() {
 function featuredCategories() {
   $('#featured-categories .box .btn-pink').hover(
     //handler in
-    function() {
+    function () {
       $(this).parents('.box').addClass('on-hover')
     },
     //handler out
-    function() {
+    function () {
       $(this).parents('.box').removeClass('on-hover')
     },
-
   )
 }
 
+function featuredCategoriesSlider() {
+  $(".featured-categories-slider").slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 690,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+}
 
 
 export default function () {
   getProductsFromWoocommerce();
   featuredCategories();
-
+  featuredCategoriesSlider();
 
 }
 
