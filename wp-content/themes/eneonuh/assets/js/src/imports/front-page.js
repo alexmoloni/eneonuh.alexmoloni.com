@@ -55,6 +55,12 @@ function featuredCategoriesSlider() {
   });
 }
 
+function checkTextWrapping() {
+  var productBoxWidth =  $('.product-wrap').outerWidth();
+  var priceTagWidth =  $('.product-price').outerWidth(true);
+  var productName = $('.product-name');
+}
+
 
 export default function () {
   getProductsFromWoocommerce();

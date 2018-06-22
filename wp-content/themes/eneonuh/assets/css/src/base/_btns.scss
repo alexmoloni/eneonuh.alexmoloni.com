@@ -1,11 +1,32 @@
-.btn-pink {
-    background-color: $secondaryColor;
-    color: #fff;
+%btn {
     font-weight: bold;
     transition: all 0.3s;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+
+}
+
+.btn-pink {
+    @extend %btn;
+    background-color: $secondaryColor;
+    color: #fff;
+
 
     &:hover {
         background-color: $colorGrey;
+    }
+}
+
+.btn-grey-txt {
+    @extend %btn;
+    background-color: #fff;
+    border: solid 2px $colorGrey;
+    color: $colorGrey;
+
+
+    &:hover {
+        background-color: $colorGrey;
+        color: #fff;
     }
 }

@@ -1,5 +1,107 @@
 #latest-products-section {
+    margin-bottom: 66px;
+
+    $br-md: 1120px;
+    $br-sm: 900px;
 
 
+    > .content {
+        display: flex;
+    }
+
+    .product-wrap {
+        margin-right: 30px;
+        width: calc( 100% - 90px );
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-image {
+            margin-bottom: 22px;
+        }
+
+        .name-and-price-row {
+            margin-bottom: 13px;
+        }
+
+        .product-name {
+            font-size: 16px;
+            text-align: left;
+            font-weight: normal;
+
+            @include maxw($br-md) {
+                font-size: 14px;
+            }
+        }
+
+        .product-price {
+            font-size: 22px;
+            font-weight: 600;
+            text-align: right;
+            margin-left: 10px;
+
+            @include maxw($br-md) {
+                font-size: 14px;
+            }
+        }
+
+        .product-add-to-cart, .product-link, .product-sold-out {
+            font-size: 14px;
+            height: 28px;
+
+            @include maxw($br-md) {
+                font-size: 12px;
+                font-weight: normal;
+            }
+
+        }
+
+        .product-link {
+            padding-left: 17px;
+            padding-right: 17px;
+
+            @include maxw($br-md) {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+        .product-add-to-cart {
+            padding-left: 22px;
+            padding-right: 22px;
+
+            @include maxw($br-md) {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+        .product-sold-out {
+            background-color: #b5b6b5;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            @include maxw($br-md) {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+
+
+    }
 
 }
