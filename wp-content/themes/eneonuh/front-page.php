@@ -18,12 +18,17 @@ $woocommerce = new Client(
 		'version' => 'wc/v2'
 	]
 );
-//print_r($woocommerce->get('products'));
-//print_r($woocommerce);?>
+
+?>
 
 <main class="main">
-	<?php get_template_part( 'templates/front-page/_hero-section' ); ?>
-	<?php get_template_part( 'templates/front-page/_featured-categories-section' ); ?>
+	<?php
+    get_template_part( 'templates/front-page/_hero-section' );
+
+	get_template_part( 'templates/front-page/_featured-categories-section' );
+
+	//we cant use get_template_part here because we need to pass $woocommerce variable
+	require_once( 'templates/front-page/_latest-products-section.php' ); ?>
 
 
 </main>

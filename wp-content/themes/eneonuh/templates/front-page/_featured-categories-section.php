@@ -6,7 +6,7 @@
  * Time: 16:37
  */
 
-require_once( 'featured-categories-boxes.php' )
+require_once( '_featured-categories-boxes.php' )
 ?>
 
 <section id="featured-categories">
