@@ -41,11 +41,13 @@ function featuredCategoriesSlider() {
     centerMode: true,
     centerPadding: '60px',
     slidesToShow: 3,
+    arrows: false,
+    dots: true,
+
     responsive: [
       {
         breakpoint: 690,
         settings: {
-          arrows: false,
           centerMode: true,
           centerPadding: '40px',
           slidesToShow: 1
@@ -56,15 +58,8 @@ function featuredCategoriesSlider() {
 }
 
 function latestroductsSlider() {
-  $("#latest-products-section > .content").slick({
-    mobileFirst: true,
-    responsive: [
-      {
-        breakpoint: 450,
-        settings: 'unslick'
-      }
-    ]
-
+  $("#latest-products-section > .content.-mobile").slick({
+    // appendArrows: $("#latest-products-section .product-image")
   });
 }
 
@@ -72,7 +67,7 @@ export default function () {
   getProductsFromWoocommerce();
   featuredCategories();
   featuredCategoriesSlider();
-  // latestroductsSlider();
+  latestroductsSlider();
 
 }
 

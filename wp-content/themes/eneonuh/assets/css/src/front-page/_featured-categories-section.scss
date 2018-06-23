@@ -248,6 +248,11 @@ section#featured-categories {
                 right: -100px;
             }
         }
+
+        .slick-arrow {
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
 
 
