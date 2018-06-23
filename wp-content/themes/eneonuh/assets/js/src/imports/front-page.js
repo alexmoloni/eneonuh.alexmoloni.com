@@ -72,7 +72,7 @@ export default function () {
   getProductsFromWoocommerce();
   featuredCategories();
   featuredCategoriesSlider();
-  latestroductsSlider();
+  // latestroductsSlider();
 
 }
 
