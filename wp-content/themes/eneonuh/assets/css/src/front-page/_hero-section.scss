@@ -57,29 +57,15 @@ section#hero {
             margin-bottom: 19px;
         }
 
-        @mixin lineBackground {
-            &:before {
-                content: '';
-                display: block;
-                opacity: 0.7;
-                background-color: #fff;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-        }
-        .heading .line {
+
+        .heading .line-1, .heading .line-2 {
             color: $colorGrey;
             font-weight: 800;
             display: block;
             text-transform: uppercase;
-            position: relative;
             font-size: 24px;
             text-align: center;
             padding: 8px 18px;
-            @include lineBackground;
 
             @include minw($br-xxs) {
                 text-align: left;
@@ -97,9 +83,6 @@ section#hero {
 
             }
 
-            .text {
-                position: relative;
-            }
         }
 
         .line-1 {

@@ -28,7 +28,11 @@ $woocommerce = new Client(
 	get_template_part( 'templates/front-page/_featured-categories-section' );
 
 	//we cant use get_template_part here because we need to pass $woocommerce variable
-	require_once( 'templates/front-page/_latest-products-section.php' ); ?>
+	require_once( 'templates/front-page/_latest-products-section.php' );
+
+	get_template_part( 'templates/front-page/_customers-opinions-section' );
+
+	?>
 
 
 </main>
