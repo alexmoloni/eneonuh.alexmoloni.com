@@ -66,7 +66,10 @@ module.exports = (env = {}) => {
                 loader: 'postcss-loader',
                 options: {
                   sourceMap: ENV == 'dev' ? true : false,
-                  plugins: () => [ require('autoprefixer')({browsers: 'last 4 versions'}) ]
+                  plugins: () => [ require('autoprefixer')({
+                    browsers: 'last 4 versions',
+                    grid: true
+                  }) ]
                 }
               },
 

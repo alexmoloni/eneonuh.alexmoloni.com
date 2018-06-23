@@ -3,7 +3,7 @@
 
     $br-md: 1120px;
     $br-sm: 900px;
-
+    $br-xs: 450px;
 
     > .content {
         display: flex;
@@ -11,7 +11,7 @@
 
     .product-wrap {
         margin-right: 30px;
-        width: calc( 100% - 90px );
+        width: calc(100% - 90px);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -101,7 +101,27 @@
             }
         }
 
+    }
 
+    @supports (display:grid) {
+        > .content {
+            display: grid;
+            //grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 30px;
+
+            @include maxw($br-sm) {
+               grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+                grid-row-gap: 30px;
+                justify-items: center;
+            }
+        }
+
+        .product-wrap {
+            margin-right: 0;
+            width: auto;
+            max-width: 380px;
+        }
     }
 
 }

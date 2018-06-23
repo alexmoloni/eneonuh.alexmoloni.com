@@ -55,17 +55,24 @@ function featuredCategoriesSlider() {
   });
 }
 
-function checkTextWrapping() {
-  var productBoxWidth =  $('.product-wrap').outerWidth();
-  var priceTagWidth =  $('.product-price').outerWidth(true);
-  var productName = $('.product-name');
-}
+function latestroductsSlider() {
+  $("#latest-products-section > .content").slick({
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 450,
+        settings: 'unslick'
+      }
+    ]
 
+  });
+}
 
 export default function () {
   getProductsFromWoocommerce();
   featuredCategories();
   featuredCategoriesSlider();
+  latestroductsSlider();
 
 }
 
