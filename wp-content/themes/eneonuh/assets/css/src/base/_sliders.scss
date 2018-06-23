@@ -31,3 +31,32 @@
 }
 
 
+.slick-dots {
+    display: flex;
+    font-size: 0;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+
+    li {
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        border: 3px solid $secondaryColor;
+        margin-right: 10px;
+        cursor: pointer;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.slick-active {
+            background-color: $secondaryColor;
+        }
+    }
+
+    button {
+        font-size: 0;
+    }
+}
+

@@ -11,7 +11,11 @@
     <div class="content">
         <div class="col-left">
             <div class="hero-img-wrap">
-                <img src="images/prod/front-page/hero-img.jpg" alt="Ene Onuh African Fashion">
+                <img srcset="
+                images/prod/front-page/hero-img-1200.jpg 1200w,
+                images/prod/front-page/hero-img-800.jpg 800w,
+                images/prod/front-page/hero-img-480.jpg 480w"
+                     src="images/prod/front-page/hero-img-1200.jpg" alt="Ene Onuh African Fashion">
             </div>
         </div>
         <div class="col-right">
