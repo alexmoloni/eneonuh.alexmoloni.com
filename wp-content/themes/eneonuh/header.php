@@ -7,5 +7,5 @@
 </head>
 <body <?php body_class() ?>>
 <?php
-get_template_part( 'templates/header/header' );
+get_template_part( 'templates/header/main' );
 ?>
