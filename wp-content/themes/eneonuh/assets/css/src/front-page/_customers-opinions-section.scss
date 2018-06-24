@@ -1,9 +1,9 @@
 #customer-opinions {
     margin-bottom: 66px;
 
-    $br-md: 1120px;
-    $br-sm: 900px;
-    $br-xs: 450px;
+    $br-md: 1030px;
+    $br-sm: 930px;
+    $br-xs: 580px;
 
     > .content {
         display: flex;
@@ -30,6 +30,11 @@
         .line-white {
             padding-left: 12px;
             padding-right: 12px;
+
+            @include maxw($br-xs) {
+                padding-left: 0;
+                padding-right: 0;
+            }
         }
 
         .line-1 {
@@ -38,6 +43,15 @@
             padding-top: 9px;
             padding-bottom: 9px;
             margin-bottom: 6px;
+
+            @include maxw($br-md) {
+                font-size: 20px;
+            }
+
+            @include maxw($br-xs) {
+                font-size: 16px;
+                text-align: center;
+            }
         }
 
         .line-2, .line-3 {
@@ -46,6 +60,16 @@
             height: 27px;
             display: flex;
             align-items: center;
+
+            @include maxw($br-md) {
+                font-size: 16px;
+            }
+
+            @include maxw($br-xs) {
+                font-size: 14px;
+                text-align: center;
+                justify-content: center;
+            }
         }
 
         .customer-name {
@@ -56,13 +80,30 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
+
+            @include maxw($br-xs) {
+                font-size: 14px;
+            }
         }
     }
 
     .col-left {
+        margin-right: 30px;
         .text-wrap {
-            right: 25px;
+            right: 45px;
             transform: translateX(100%);
+
+            @include maxw($br-md) {
+                right: 110px;
+            }
+
+            @include maxw($br-sm) {
+                width: 100%;
+                right: auto;
+                bottom: 24px;
+                transform: translate(0, 0);
+                top: auto;
+            }
         }
         .customer-name {
             text-align: right;
@@ -72,10 +113,29 @@
     .col-right {
         margin-top: 248px;
 
+        @include maxw($br-md) {
+            margin-top: 218px;
+        }
+
         .text-wrap {
-            left: 25px;
+            left: 45px;
             transform: translateX(-100%);
             text-align: right;
+
+            @include maxw($br-md) {
+                left: 110px;
+            }
+
+            @include maxw($br-sm) {
+                width: 100%;
+                left: auto;
+                top: 40px;
+                transform: translate(0, -100%);
+            }
+
+            @include maxw($br-xs) {
+                top: -10px;
+            }
         }
 
         .line-2, .line-3 {
