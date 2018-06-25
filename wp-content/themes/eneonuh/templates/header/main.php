@@ -11,7 +11,7 @@
     <div class="content">
         <h1 class="logo desktop-only">
             <a href="/">
-                <img src="images/prod/header/logo.png" alt="Ene Onuh Fashion Logo">
+                <img src="/images/prod/header/logo.png" alt="Ene Onuh Fashion Logo">
                 <span>ene <strong>onuh</strong></span>
             </a>
         </h1>
