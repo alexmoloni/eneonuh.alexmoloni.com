@@ -122,3 +122,25 @@ section[class*=section] {
 		position: relative;
 	}
 }
+
+a.underline-on-hover {
+	//underline on hover - no underline because want custom positioning
+	position: relative;
+
+	&:after {
+		transition: all 0.3s;
+		opacity: 0;
+		display: block;
+		content: '';
+		width: 100%;
+		height: 1px;
+		background-color: #fff;
+		position: absolute;
+		bottom: -3px;
+		left: 0;
+	}
+
+	&:hover:after {
+		opacity: 1;
+	}
+}

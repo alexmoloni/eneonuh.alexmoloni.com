@@ -1,10 +1,27 @@
 #footer section.footer-nav {
+    $br-md: 860px;
+    $br-sm: 600px;
+    $br-xs: 500px;
+
     margin-bottom: 50px;
 
     @supports (display:grid) {
         > .content {
             display: grid;
             grid-template: auto / repeat(4, 1fr);
+
+            @include maxw($br-md) {
+                grid-template-rows: auto auto;
+                grid-template-columns: repeat(3, 1fr);
+                grid-row-gap: 40px;
+            }
+
+            @include maxw($br-xs) {
+                grid-template-rows: auto auto;
+                grid-template-columns: repeat(2, 1fr);
+                grid-column-gap: 20px;
+
+            }
         }
     }
 
@@ -16,6 +33,12 @@
         padding-bottom: 17px;
         margin-bottom: 40px;
         position: relative;
+
+        @include maxw($br-sm) {
+            font-size: 14px;
+            padding-bottom: 13px;
+            margin-bottom: 30px;
+        }
 
         //decorative underline
         &:before {
@@ -31,19 +54,127 @@
         }
     }
 
-    .footer-navigation-social-media {
-        text-align: right;
 
-        .menu-title:before {
-            left: auto;
-            right: 0;
-        }
-    }
 
 
     .menu-item {
         font-size: 16px;
         font-weight: 300;
         margin-bottom: 30px;
+
+        @include maxw($br-sm) {
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        @include maxw($br-xs) {
+            font-size: 13px;
+        }
+    }
+
+    .menu-item-phone {
+        padding-left: 25px;
+        position: relative;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-image: url(/images/prod/footer/phone.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 17px;
+            height: 17px;
+        }
+    }
+
+    .footer-navigation-address {
+        @include maxw($br-xs) {
+            grid-column: 1 / span 1;
+        }
+    }
+
+
+    .footer-navigation-social-media {
+        text-align: right;
+
+        @include maxw($br-md) {
+            grid-column: 1 / -1;
+            text-align: left;
+
+        }
+
+        @include maxw($br-xs) {
+            grid-column: 2 / -1;
+        }
+
+        .menu-title:before {
+            left: auto;
+            right: 0;
+
+            @include maxw($br-md) {
+                left: 0;
+                right: auto;
+            }
+        }
+
+        .menu-social-media {
+            @include maxw($br-md) {
+                display: flex;
+                align-items: center;
+            }
+
+            @include maxw($br-xs) {
+                display: block;
+            }
+        }
+
+        .menu-item {
+            @include maxw($br-md) {
+                margin-right: 40px;
+            }
+        }
+
+
+        .menu-item a{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 123px;
+            margin-left: auto;
+            margin-right: 0;
+
+            @include maxw($br-sm) {
+                justify-content: flex-start;
+            }
+
+            @include maxw($br-xs) {
+                margin-left: 0;
+                margin-right: auto;
+            }
+        }
+
+        .menu-item a:before {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-right: 20px;
+        }
+
+        .menu-item-fb a:before {
+            background-image: url(/images/prod/footer/fb.svg);
+        }
+
+        .menu-item-pinterest a:before {
+            background-image: url(/images/prod/footer/pinterest.svg);
+        }
+
+        .menu-item-instagram a:before {
+            background-image: url(/images/prod/footer/instagram.svg);
+        }
     }
 }
