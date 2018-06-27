@@ -9,15 +9,15 @@
 $boxes = [
 	'1' => '            <div class="box box-1">
                 <img class="placeholder" src="images/prod/front-page/placholder.png" alt="">
-                <img src="images/prod/front-page/sukienki-etniczne.png" alt="">
+                <img src="/images/prod/front-page/odziez-damska.png" alt="">
                 <div class="txt-and-btn">
                     <div class="txt">
-                        Sukienki<br>
-                        <strong>Etniczne</strong>
+                        Odzież<br>
+                        <strong>Damska</strong>
                     </div>
-                    <div class="btn-pink">
+                    <a href="/kategorie/woman" class="btn-pink">
                         zobacz
-                    </div>
+                    </a>
                 </div>
 
             </div>
