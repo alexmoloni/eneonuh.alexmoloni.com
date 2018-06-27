@@ -41,15 +41,18 @@ add_action('wp_enqueue_scripts', 'enqueueJsAndCss');
 function remove_woocommerce_styles_scripts() {
 	if ( function_exists( 'is_woocommerce' ) ) {
 		if ( ! is_woocommerce() && ! is_cart() && ! is_checkout() ) {
+			# The scripts
+			wp_dequeue_script( 'wc-add-to-cart' );
+			wp_dequeue_script( 'wc-cart-fragments' );
+			wp_dequeue_script( 'woocommerce' );
+		}
+
+		if ( ! is_cart() && ! is_checkout() ) {
 			# The styles
 			wp_dequeue_style( 'woocommerce-general' );
 			wp_dequeue_style( 'woocommerce-layout' );
 			wp_dequeue_style( 'woocommerce-smallscreen' );
 
-			# The scripts
-			wp_dequeue_script( 'wc-add-to-cart' );
-			wp_dequeue_script( 'wc-cart-fragments' );
-			wp_dequeue_script( 'woocommerce' );
 		}
 	}
 }

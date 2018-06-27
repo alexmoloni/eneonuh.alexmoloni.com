@@ -30,3 +30,4 @@ function my_theme_wrapper_end() {
 </div>
 </section>';
 }
+
